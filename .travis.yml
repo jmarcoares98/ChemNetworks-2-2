@@ -2,11 +2,8 @@ language: bash
 os: windows
 script: 
   - echo "here are test jobs for ChemNetworks-2.2"
-  - echo ""
-
   - echo "test1.."
-  - cd ./test1/
-  - cp ../../ChemNetworks-2.2.exe ./
+  - cd ./test1
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz lab=$?
 
   - if test $lab -eq 0; then echo "test1 passed"
