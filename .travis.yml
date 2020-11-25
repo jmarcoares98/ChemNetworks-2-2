@@ -9,27 +9,27 @@ script:
   - echo "here are test jobs for ChemNetworks-2.2"
   - echo "test1.."
   - cp ChemNetworks-2.2.exe test-jobs/test1/ChemNetworks-2.2.exe
+  - cp ChemNetworks-2.2.exe test-jobs/test2/ChemNetworks-2.2.exe
+  - cp ChemNetworks-2.2.exe test-jobs/test3/ChemNetworks-2.2.exe
+  - cp ChemNetworks-2.2.exe test-jobs/test4/ChemNetworks-2.2.exe
   - cd test-jobs/test1
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz 
   - lab=$?
   - if [ $lab -eq 0 ]; then echo "test1 passed"; else echo "test1 error"; fi
   - echo "test2.."
-  - cp ChemNetworks-2.2.exe test-jobs/test2/ChemNetworks-2.2.exe
   - cd test-jobs/test2
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test2 water1.xyz solB1.xyz
   - lab=$?
   - if [ $lab -eq 0 ]; then echo "test2 passed"; else echo "test2 error"; fi
   - echo "test3.."
-  - cp ChemNetworks-2.2.exe test-jobs/test3/ChemNetworks-2.2.exe
   - cd test-jobs/test3
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test3 water1.xyz solB1.xyz solC1.xyz
   - lab=$?
   - if [ $lab -eq 0 ]; then echo "test3 passed"; else echo "test3 error"; fi
   - echo "test4.."
-  - cp ChemNetworks-2.2.exe test-jobs/test4/ChemNetworks-2.2.exe
   - cd test-jobs/test4
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test4 water1.xyz solC1.xyz solB1.xyz
