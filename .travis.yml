@@ -15,8 +15,8 @@ script:
   - cd test-jobs/test1
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz 
-  - lab=$?
-  - if $lab -eq 0; then echo "test1 passed"; else echo "test1 error"; fi
+  - echo $?
+  - if $? -eq 0; then echo "test1 passed"; else echo "test1 error"; fi
   - echo "test2.."
   - cd ..
   - cd test2
