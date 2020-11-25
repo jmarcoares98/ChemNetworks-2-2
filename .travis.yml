@@ -13,4 +13,4 @@ script:
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz 
   - lab=$?
-  - sudo if [ $lab -eq 0 ]; then echo "test1 passed"; fi
+  - if [ $lab -eq 0 ]; then echo "test1 passed"; fi
