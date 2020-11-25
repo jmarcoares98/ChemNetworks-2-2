@@ -15,26 +15,25 @@ script:
   - cd test-jobs/test1
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz 
-  - echo $?
-  - if $? -eq 0; then echo "test1 passed"; else echo "test1 error"; fi
+  - if $? -eq 1; then echo "test1 passed"; else echo "test1 error"; fi
   - echo "test2.."
   - cd ..
   - cd test2
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test2 water1.xyz solB1.xyz
   - lab=$?
-  - if $lab -eq 0; then echo "test2 passed"; else echo "test2 error"; fi
+  - if $lab -eq 1; then echo "test2 passed"; else echo "test2 error"; fi
   - echo "test3.."
   - cd ..
   - cd test3
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test3 water1.xyz solB1.xyz solC1.xyz
   - lab=$?
-  - if $lab -eq 0; then echo "test3 passed"; else echo "test3 error"; fi
+  - if $lab -eq 1; then echo "test3 passed"; else echo "test3 error"; fi
   - echo "test4.."
   - cd ..
   - cd test4
   - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test4 water1.xyz solC1.xyz solB1.xyz
   - lab=$?
-  - if $lab -eq 0; then echo "test4 passed"; else echo "test4 error"; fi
+  - if $lab -eq 1; then echo "test4 passed"; else echo "test4 error"; fi
