@@ -4,6 +4,6 @@ script:
   - echo "here are test jobs for ChemNetworks-2.2"
   - echo "test1.."
   - cd test-jobs/test1
+  - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz lab=$?
-
   - if test $lab -eq 0; then echo "test1 passed"
