@@ -10,7 +10,7 @@ script:
   - echo "test1.."
   - cp ChemNetworks-2.2.exe test-jobs/test1/ChemNetworks-2.2.exe
   - cd test-jobs/test1
-  - chmod +x ChemNetworks-2.2
+  - chmod +x ChemNetworks-2.2.exe
   - ./ChemNetworks-2.2.exe Input-test1 water1.xyz 
   - lab=$?
   - if test $lab -eq 0; then echo "test1 passed"
