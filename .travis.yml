@@ -1,0 +1,3 @@
+language: bash
+os: windows:
+script: ./test-jobs/run_ChemNetworks_tests.sh
