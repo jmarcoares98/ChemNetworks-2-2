@@ -18,5 +18,12 @@
   echo "test$task..."
   chmod +x ChemNetworks-2.2.exe
   ./ChemNetworks-2.2.exe Input-test$task $ARGS
+  lab=$?
+  if test $lab -eq 0; then
+    echo "test$task passed"
+  else 
+    echo "test$task failed"
+    exit 1
+  fi
   popd
   done
