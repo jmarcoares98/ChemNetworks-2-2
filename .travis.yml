@@ -26,4 +26,3 @@ script:
   - fi
   - popd
   - done
-  - wait
