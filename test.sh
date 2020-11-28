@@ -5,7 +5,7 @@
   do
   cp ChemNetworks-2.2.exe test-jobs/test$i/ChemNetworks-2.2.exe
   lab=$?
-  if test $lab -ne 0
+  if test $lab -ne 0; then
     break
   else
     echo "cp test$i"
