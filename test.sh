@@ -9,10 +9,10 @@
   for task in {1..4}
   do
   case $task in
-    1) ARGS="water.xyz" ;;
+    1) ARGS="water1.xyz" ;;
     2) ARGS="water1.xyz solB1.xyz" ;;
     3) ARGS="water1.xyz solB1.xyz solC1.xyz" ;;
-    4) ARGS="water1.xyz solC1 solB1.xyz" ;;
+    4) ARGS="water1.xyz solC1.xyz solB1.xyz" ;;
   esac
   pushd test$task
   echo "test$task..."
