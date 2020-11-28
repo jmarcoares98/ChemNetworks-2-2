@@ -6,4 +6,5 @@ compiler:
 services:
 - docker
 script: 
+- chmod +x test.sh
 - ./test.sh
