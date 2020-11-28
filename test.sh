@@ -1,8 +1,15 @@
   #!/bin/sh
   echo "here are test jobs for ChemNetworks-2.2"
-  for i in {1..4}
+  i = 1
+  while true
   do
     cp ChemNetworks-2.2.exe test-jobs/test$i/ChemNetworks-2.2.exe
+    lab=$?
+    if test $lab -ne 0; then
+      break
+    else
+      echo "cp test$i" 
+    i+=1
   done
   
   cd test-jobs
@@ -23,7 +30,6 @@
     echo "test$task passed"
   else 
     echo "test$task failed"
-    exit 1
   fi
   popd
   done
