@@ -12,7 +12,7 @@
   fi
   done
   tests = $[$i -1]
-  echp "$tests"
+  echo "$tests"
   cd test-jobs
   for task in {1..$tests}
   do
@@ -31,6 +31,7 @@
     echo "test$task passed"
   else 
     echo "test$task failed"
+    exit 1
   fi
   popd
   done
