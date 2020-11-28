@@ -11,9 +11,10 @@
     echo "cp test$i"
   fi
   done
-  
+  tests = $[$i -1]
+  echp "$tests"
   cd test-jobs
-  for task in {1..4}
+  for task in {1..$tests}
   do
   case $task in
     1) ARGS="water1.xyz" ;;
