@@ -16,6 +16,7 @@
   esac
   pushd test$task
   echo "test$task..."
+  chmod +x ChemNetworks-2.2.exe
   ./chemNetworks-2.2.exe Input-test$task $ARGS
   fi
   popd
