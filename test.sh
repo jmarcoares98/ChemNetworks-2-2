@@ -1,6 +1,6 @@
   #!/bin/sh
   echo "here are test jobs for ChemNetworks-2.2"
-  i = 1
+  i = "1"
   while true; do
   cp ChemNetworks-2.2.exe test-jobs/test$i/ChemNetworks-2.2.exe
   lab=$?
@@ -8,7 +8,7 @@
     break
   else
     echo "cp test$i" 
-  i+=1
+  i=$[$i + 1]
   fi
   done
   
