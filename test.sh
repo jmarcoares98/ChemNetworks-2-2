@@ -3,7 +3,8 @@
   
   for ((i=2;i<=$#; i++))
   do
-  ARGS.="$i"
+  ARG$i={i}
+  ARGS.="ARG$i"
   ARGS.=" "
   done
  
