@@ -1,4 +1,6 @@
   #!/usr/bin/env bash
+  NUM=${1?Error: no number given}
+  
   for ((i=2;i<=$#; i++))
   do
   ARGS.=$i
