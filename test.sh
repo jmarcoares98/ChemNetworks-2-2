@@ -1,37 +1,24 @@
   #!/usr/bin/env bash
-  ARG1=${1?Error: no input given}
-  ARG2=${2?Error: no input given}
-  ARG3=${3?Error: no input given}
+  NUM={1?:Error: no number given}
+  INPUT={2?Error: no input given}
+  ARG1=${3?Error: no file given}
+  ARG2=${4?}
+  ARG3=${5?}
   
+  echo"$ARG1 and ARG2 and $ARG3"
   echo "here are test jobs for ChemNetworks-2.2"
  
-  for ((i=1; ;++i))
-  do
-  cp ChemNetworks-2.2.exe test-jobs/test$i/ChemNetworks-2.2.exe
-  lab=$?
-  if test $lab -ne 0; then
-    break
-  else
-    echo "cp test$i"
-  fi
-  done
+  cp ChemNetworks-2.2.exe test-jobs/test$NUM/ChemNetworks-2.2.exe
 
   cd test-jobs
-  for ((task=1; ;++task))
-  do
-  case $task in
-  1) ARGS="$ARG1" ;;
-  2) ARGS="$ARG1 $ARG2" ;;
-  3) ARGS="$ARG1 $ARG2 $ARG3" ;;
-  4) ARGS="$ARG1 $ARG3 $ARG2" ;;
-  esac
-  pushd test$task
-  echo "test$task..."
+  ARGS="$INPUT $ARG1"  
+  pushd test$NUM
+  echo "test$NUM..."
   chmod +x ChemNetworks-2.2.exe
-  ./ChemNetworks-2.2.exe Input-test$task $ARGS
+  ./ChemNetworks-2.2.exe $ARGS
   lab=$?
   if test $lab -eq 0; then
-    echo "test$task passed"
+    echo "test$NUM passed"
   else 
     break
   fi
