@@ -1,15 +1,8 @@
   #!/usr/bin/env bash
   NUM=${1?Error: no number given}
   
-  for ((i=1;i<=$#; i++))
-  do
-  ARG$i=$1
-  echo "$ARG$i"
-  ARGS+="ARG$i"
-  ARGS+=" "
-  done
-  
-  echo "$@"
+  INPUT=$@
+  ARGS=${INPUT:2}
  
   cp ChemNetworks-2.2.exe test-jobs/test$NUM/ChemNetworks-2.2.exe
 
