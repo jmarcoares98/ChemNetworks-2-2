@@ -5,8 +5,8 @@
   do
   ARG$i=${i}
   echo "ARG$i"
-  ARGS.="ARG$i"
-  ARGS.=" "
+  ARGS+="ARG$i"
+  ARGS+=" "
   done
  
   cp ChemNetworks-2.2.exe test-jobs/test$NUM/ChemNetworks-2.2.exe
