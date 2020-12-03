@@ -10,4 +10,4 @@ script:
 - ./test.sh 1 Input-test1 water1.xyz
 - ./test.sh 2 Input-test2 water1.xyz solB1.xyz
 - ./test.sh 3 Input-test3 water1.xyz solB1.xyz solC1.xyz
-- ./test.sh 4 Input-test4 water1.xyz solB1.xyz solC1.xyz
+- ./test.sh 4 Input-test4 water1.xyz solC1.xyz solB1.xyz
