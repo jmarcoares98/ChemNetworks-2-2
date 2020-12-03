@@ -15,12 +15,7 @@
   cd test-jobs
   for ((task=1; ;++task))
   do
-  case $task in
-    1) ARGS="water1.xyz" ;;
-    2) ARGS="water1.xyz solB1.xyz" ;;
-    3) ARGS="water1.xyz solB1.xyz solC1.xyz" ;;
-    4) ARGS="water1.xyz solC1.xyz solB1.xyz" ;;
-  esac
+  read -p "Enter inputs : " ARGS
   pushd test$task
   echo "test$task..."
   chmod +x ChemNetworks-2.2.exe
