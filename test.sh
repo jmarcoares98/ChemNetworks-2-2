@@ -1,14 +1,14 @@
   #!/usr/bin/env bash
-  NUM=${1?Error: no number given}
-  INPUT=${2?Error: no input given}
-  ARG1=${3?Error: no file given}
-  ARG2=${4}
-  ARG3=${5}
+  for ((i=2;i<=$#; i++))
+  do
+  ARGS.=$i
+  ARGS.=" "
+  done
  
   cp ChemNetworks-2.2.exe test-jobs/test$NUM/ChemNetworks-2.2.exe
 
   cd test-jobs/test$NUM
-  ARGS="$INPUT $ARG1 $ARG2 $ARG3"  
+
   echo "testing test$NUM..."
   chmod +x ChemNetworks-2.2.exe
   ./ChemNetworks-2.2.exe $ARGS
