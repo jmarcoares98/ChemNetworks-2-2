@@ -11,7 +11,7 @@
   cp ChemNetworks-2.2.exe test-jobs/test$NUM/ChemNetworks-2.2.exe
 
   cd test-jobs/test$NUM
-  ARGS="$INPUT $ARG1"  
+  ARGS="$INPUT $ARG1 $ARG2 $ARG3"  
   echo "test$NUM..."
   chmod +x ChemNetworks-2.2.exe
   ./ChemNetworks-2.2.exe $ARGS
