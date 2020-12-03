@@ -1,7 +1,7 @@
   #!/bin/sh
   echo "here are test jobs for ChemNetworks-2.2"
  
-  for {i=1; ;++i}
+  for ((i=1; ;++i))
   do
   cp ChemNetworks-2.2.exe test-jobs/test$i/ChemNetworks-2.2.exe
   lab=$?
@@ -13,7 +13,7 @@
   done
 
   cd test-jobs
-  for {task=1; ;++task}
+  for ((task=1; ;++task))
   do
   case $task in
     1) ARGS="water1.xyz" ;;
