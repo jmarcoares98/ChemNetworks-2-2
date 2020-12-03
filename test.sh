@@ -10,7 +10,7 @@
  
   cp ChemNetworks-2.2.exe test-jobs/test$NUM/ChemNetworks-2.2.exe
 
-  cd test-jobs
+  cd test-jobs/test$NUM
   ARGS="$INPUT $ARG1"  
   echo "test$NUM..."
   chmod +x ChemNetworks-2.2.exe
@@ -19,6 +19,6 @@
   if test $lab -eq 0; then
     echo "test$NUM passed"
   else 
-    break
+    echo "test$NUM failed"
   fi
   echo""
