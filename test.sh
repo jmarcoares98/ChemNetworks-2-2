@@ -26,7 +26,6 @@
   4) ARGS="$ARG1 $ARG3 $ARG2" ;;
   esac
   pushd test$task
-  echo "$?"
   echo "test$task..."
   chmod +x ChemNetworks-2.2.exe
   ./ChemNetworks-2.2.exe Input-test$task $ARGS
