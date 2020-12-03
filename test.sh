@@ -30,7 +30,7 @@
   if test $lab -eq 0; then
     echo "test$task passed"
   else 
-    echo "test$task failed"
+    break
   fi
   popd
   done
