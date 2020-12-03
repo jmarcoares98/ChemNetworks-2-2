@@ -7,4 +7,4 @@ services:
 - docker
 script: 
 - chmod +x test.sh
-- ./test.sh 1 Input-test1 water1.xyz
+- ./test.sh 1 Input-test1 water1.xyz solB1.xyz solC1.xyz
